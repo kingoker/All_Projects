@@ -1,7 +1,7 @@
 import os
 import sys
 
-sys.path.append('/home/c/ci79299/All_Projects/public_html')
+sys.path.append('/home/c/ci79299/All_Projects/public_html/root')
 sys.path.append('/home/c/ci79299/All_Projects/public_html/myvenv/lib/python3.6/site-packages')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'root.settings'
 import django
