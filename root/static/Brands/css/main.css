@@ -1,0 +1,129 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.body {
+    background-color: #F2F2F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img{
+    height: 100%;
+}
+.line{
+    color: #ebebeb;
+    margin: 20px auto;
+}
+.container{
+    max-width: 1250px;
+    margin: 0px 30px;
+}
+.header{
+    height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 6px rgba(4, 4, 15, 0.36);
+    border-radius: 0px 0px 16px 16px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+.header__contaner{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.header__logo{
+    height: 30px;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    text-decoration: none;
+}
+.header__logo h1{
+    text-decoration: none;
+}
+.header__title, .language{
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f5f5f7;
+    font-weight: 500;
+    font-size: 15px;
+}
+.companies{
+    min-height: 100vh;
+}
+.companies__container{
+    padding-top: 88px;
+}
+.companies__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+.companies__item{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    width: 300px;
+    transition: box-shadow 0.4s ease;
+    text-decoration: none;
+}
+.companies__item:hover{
+    box-shadow: 0px 3px 7px rgba(148, 148, 148, 0.36);
+}
+.company__name{
+    text-align: center;
+    color: #C4C4C6;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 25px;
+}
+.company__img{
+    width: 100%;
+    height: 100px;
+    object-fit: scale-down;
+    margin: 30px auto 30px auto;
+    align-self: center;
+}
+.h3__title{
+    color: #C4C4C6;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+.sertificat__list{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.sertificat__item{
+    width: 93px;
+    object-fit: scale-down;
+}
+.footer{
+    height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -3px 6px rgba(4, 4, 15, 0.36);
+    border-radius: 16px 16px 0px 0px;
+    z-index: 1;
+    background: rgba(0,0,0,0.8);
+    margin-top: 100px;
+}
+
