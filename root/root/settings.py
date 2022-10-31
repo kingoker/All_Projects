@@ -123,6 +123,11 @@ USE_TZ = True
 
 # Настройки статичных файлов
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR/"All_Projects/static",
+    BASE_DIR/"Brands/static",
+    BASE_DIR/"Hujjatlar/static",
+]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
