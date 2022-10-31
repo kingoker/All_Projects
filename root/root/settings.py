@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'All_Projects.apps.AllProjectsConfig',
     'Brands.apps.BrandsConfig',
+    'Hujjatlar.apps.HujjatlarConfig'
 ]
 
 MIDDLEWARE = [
