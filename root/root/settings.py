@@ -128,7 +128,8 @@ STATICFILES_DIRS = [
     BASE_DIR/"Brands/static",
     BASE_DIR/"Hujjatlar/static",
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'root/static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/"media/"
