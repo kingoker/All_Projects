@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kj4x+ilz*1zmup+-s5+nbg0wn&vh^7pk6dhbui#5775$y7mf6)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '*',
@@ -122,8 +122,8 @@ USE_TZ = True
 
 
 # Настройки статичных файлов
-STATIC_URL = 'root/static/'
-# STATIC_URL = '/static/'
+# STATIC_URL = 'root/static/' #для сервера
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR/"All_Projects/static",
     BASE_DIR/"Brands/static",

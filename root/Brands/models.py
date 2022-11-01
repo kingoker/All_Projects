@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+
+class Certificates(models.Model):
+    title = models.CharField()
