@@ -1,7 +1,13 @@
 from django.shortcuts import render
 
+from Brands.models import *
+
 
 def main(request):
-    pass
+    manufacture = Manufacture.objects.all()
+
+    data = {
+        'manufacture': manufacture,
+    }
     
-    return render(request, 'Brands/index.html')
+    return render(request, 'Brands/index.html', data)

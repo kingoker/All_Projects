@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from Brands.models import *
+
+
+admin.site.register(Certificate)
+admin.site.register(Manufacture)

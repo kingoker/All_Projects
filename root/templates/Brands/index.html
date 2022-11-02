@@ -22,15 +22,19 @@
     <section class="companies">
         <div class="companies__container container">
             <div class="companies__list">
+                {% for manufacture in manufacture %}
                 <a href="#" class="companies__item company">
-                    <h2 class="company__name">Indorama Kokand Textile</h2>
-                    <img src="img/companies/indorama.png" alt="indorama" class="company__img">
+                    <h2 class="company__name">{{ manufacture.title }}</h2>
+                    <img src="{{ manufacture.image.url }}" alt="indorama" class="company__img">
                     <hr class="line">
                     <h3 class="h3__title">Сертификаты:</h3>
                     <div class="sertificat__list">
-                        <img src="img/sertificats/OEKO-TEX.png" class="sertificat__item">
+                        {% for c in manufacture.certificates.all %}
+                        <img src="{{ c.image.url }}" class="sertificat__item">
+                        {% endfor %}
                     </div>
                 </a>
+                {% endfor %}
             </div>
         </div>
     </section>
