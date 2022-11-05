@@ -122,8 +122,8 @@ USE_TZ = True
 
 
 # Настройки статичных файлов
-STATIC_URL = 'root/static/' #для сервера
-# STATIC_URL = '/static/'
+# STATIC_URL = 'root/static/' #для сервера
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR/"All_Projects/static",
     BASE_DIR/"Brands/static",

@@ -1,246 +1,134 @@
-<!DOCTYPE html>
+{% extends 'Hujjatlar/custom/base.html' %}
 {% load static %}
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hujjatlar2</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{% static 'Hujjatlar/css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'Hujjatlar/css/main.css' %}">
-</head>
-
-<body class="wrapper">
-    <header class="header">
-        <div class="header__container container">
-            <div class="header__logo logo">
-                <a class="logo__text" href="">Hujjatlar 2</a>
-            </div>
+{% block title %}Главная{% endblock %}
 
 
-            <div class="header__tools tools">
-                <a href="#popup__folder" class="tools__link popup-link">
+{% block tools %}
+<div class="header__tools tools">
+    <a href="#popup__folder" class="tools__link popup-link">
+        <i class="bi bi-folder-fill"></i>
+    </a>
+    <a href="#upload__file" class="tools__link popup-link">
+        <i class="bi bi-cloud-arrow-up-fill"></i>
+    </a>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<section class="main">
+    <div class="main__container container">
+        <div class="breadcrumbs">
+            <a href="#" class="breadcrumbs__item">Главная</a> /
+            <a href="#" class="breadcrumbs__item">Главная</a> /
+            <a href="#" class="breadcrumbs__item">Длинное Название папки</a> /
+            <a href="#" class="breadcrumbs__item">Главная</a> /
+            <a href="#" class="breadcrumbs__item">Длинное Название папки</a> /
+            <a href="#" class="breadcrumbs__item">Длинное Название папки</a> /
+            <a href="#" class="breadcrumbs__item">Главная</a> /
+            <a href="#" class="breadcrumbs__item breadcrumbs__item-active">Папка вторая</a> /
+        </div>
+        <h2 class="main__subtitle">
+            папки
+        </h2>
+        <div class="folder__list">
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Длинное Название папки">
                     <i class="bi bi-folder-fill"></i>
+                    <p class="folder__name">Длинное Название папки</p>
                 </a>
-                <a href="#upload__file" class="tools__link popup-link">
-                    <i class="bi bi-cloud-arrow-up-fill"></i>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
                 </a>
             </div>
-
-
-            <div class="header__profile">
-                <a href="#login" class="tools__link popup-link">
-                    <i class="bi bi-person-circle"></i>
+            <div class="folder__item">
+                <a href="/" class="folder__link"  title="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!">
+                    <i class="bi bi-folder-fill"></i>
+                    <p class="folder__name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
                 </a>
             </div>
         </div>
-    </header>
 
-    
-    <div class="sedebarMain__container">
-        <section class="sidebar">
-            <div class="sidebar__container container">
-                <div class="sidebar__list"  id="menu-act">
-                    <a href="index.html" class="sidebar__item sidebar__item-active">
-                        <i class="bi bi-folder-fill"></i>
-                        Hujjatlar
-                    </a>
-                    <details class="sidebar__details">
-                        <summary class="sidebar__item">
-                            <i class="bi bi-bar-chart-line-fill"></i>
-                            Показатели отделов
-                            <i class="bi bi-caret-down-fill"></i>
-                        </summary>
-                        <a href="finance.html" class="sidebar__item_element">Финансы</a>
-                        <a href="export.html" class="sidebar__item_element">Экспорт</a>
-                    </details>
-                    <a href="videoCourses.html" class="sidebar__item">
-                        <i class="bi bi-mortarboard-fill"></i>
-                        Видео уроки
-                    </a>
-                    <a href="creating.html" class="sidebar__item">
-                        <i class="bi bi-check-square-fill"></i>
-                        ToDo List
-                    </a>
-                    <a href="creating.html" class="sidebar__item">
-                        <i class="bi bi-telegram"></i>
-                        Чат
-                    </a>
-                </div>
-            </div>
-        </section>
-    
-        <section class="main">
-            <div class="main__container container">
-                <div class="breadcrumbs">
-                    <a href="#" class="breadcrumbs__item">Главная</a> / 
-                    <a href="#" class="breadcrumbs__item">Главная</a> / 
-                    <a href="#" class="breadcrumbs__item">Длинное Название папки</a> / 
-                    <a href="#" class="breadcrumbs__item">Главная</a> / 
-                    <a href="#" class="breadcrumbs__item">Длинное Название папки</a> / 
-                    <a href="#" class="breadcrumbs__item">Длинное Название папки</a> / 
-                    <a href="#" class="breadcrumbs__item">Главная</a> / 
-                    <a href="#" class="breadcrumbs__item breadcrumbs__item-active">Папка вторая</a> / 
-                </div>
-                <h2 class="main__subtitle">
-                    папки
-                </h2>
-                <div class="folder__list">
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Длинное Название папки">
-                            <i class="bi bi-folder-fill"></i>
-                            <p class="folder__name">Длинное Название папки</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="/" class="folder__link"  title="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!">
-                            <i class="bi bi-folder-fill"></i>
-                            <p class="folder__name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <h2 class="main__subtitle">
-                    файлы
-                </h2>
-                <div class="folder__list">
-                    <div class="folder__item">
-                        <a href="" class="folder__link" title="PDF файл">
-                            <i class="bi bi-file-earmark-pdf-fill pdf__icon"></i>
-                            <p class="folder__name">PDF файл</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Excel файл">
-                            <i class="bi bi-table excel__icon"></i>
-                            <p class="folder__name">Excel файл</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Картинка">
-                            <i class="bi bi-image"></i>
-                            <p class="folder__name">Картинка</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Музыка">
-                            <i class="bi bi-file-earmark-music-fill"></i>
-                            <p class="folder__name">Музыка</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Видео">
-                            <i class="bi bi-file-play-fill"></i>
-                            <p class="folder__name">Видео</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Архив">
-                            <i class="bi bi-file-earmark-zip-fill"></i>
-                            <p class="folder__name">Архив</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Неизвестный файл">
-                            <i class="bi bi-file-earmark-fill"></i>
-                            <p class="folder__name">Неизвестный файл</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                    <div class="folder__item">
-                        <a href="" class="folder__link"  title="Word файл">
-                            <i class="bi bi-file-earmark-word-fill word__icon"></i>
-                            <p class="folder__name">Word файл</p>
-                        </a>
-                        <a href="#" class="folder__delete">
-                            <i class="bi bi-trash3-fill"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-
-
-
-    <!-- Модальные окна -->
-    <div id="popup__folder" class="popup-create-folder popup">
-        <div class="popup-create-folder__body popup__body">
-            <div class="popup-create-folder__content popup__content">
-                <a href="#">
-                    <div class="popup_close close__popup"></div>
+        <h2 class="main__subtitle">
+            файлы
+        </h2>
+        <div class="folder__list">
+            <div class="folder__item">
+                <a href="" class="folder__link" title="PDF файл">
+                    <i class="bi bi-file-earmark-pdf-fill pdf__icon"></i>
+                    <p class="folder__name">PDF файл</p>
                 </a>
-                <div class="popup__title">Создать папку</div>
-                <form method="POST" class="form popup__form">
-                    <input type="text" class="popup__input" placeholder="Название папки" required>
-                    <button class="popup__button button">Создать папку</button>
-                </form>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Excel файл">
+                    <i class="bi bi-table excel__icon"></i>
+                    <p class="folder__name">Excel файл</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Картинка">
+                    <i class="bi bi-image"></i>
+                    <p class="folder__name">Картинка</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Музыка">
+                    <i class="bi bi-file-earmark-music-fill"></i>
+                    <p class="folder__name">Музыка</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Видео">
+                    <i class="bi bi-file-play-fill"></i>
+                    <p class="folder__name">Видео</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Архив">
+                    <i class="bi bi-file-earmark-zip-fill"></i>
+                    <p class="folder__name">Архив</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Неизвестный файл">
+                    <i class="bi bi-file-earmark-fill"></i>
+                    <p class="folder__name">Неизвестный файл</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
+            </div>
+            <div class="folder__item">
+                <a href="" class="folder__link"  title="Word файл">
+                    <i class="bi bi-file-earmark-word-fill word__icon"></i>
+                    <p class="folder__name">Word файл</p>
+                </a>
+                <a href="#" class="folder__delete">
+                    <i class="bi bi-trash3-fill"></i>
+                </a>
             </div>
         </div>
     </div>
-
-    <div id="upload__file" class="popup-upload-file popup">
-        <div class="popup-create-folder__body popup__body">
-            <div class="popup-create-folder__content popup__content">
-                <a href="#">
-                    <div class="popup_close close__popup"></div>
-                </a>
-                <div class="popup__title">Загрузить документ</div>
-                <form method="POST"  class="form popup__form" enctype="multipart/form-data">
-                    <input type="file" class="popup__input" placeholder="Название папки" required>
-                    <button type="submit" class="popup__button button">Загрузить</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div id="login" class="popup-create-folder popup">
-        <div class="popup-create-folder__body popup__body">
-            <div class="popup-create-folder__content popup__content">
-                <a href="#">
-                    <div class="popup_close close__popup"></div>
-                </a>
-                <div class="popup__title">Авторизация</div>
-                <form method="POST" class="form popup__form">
-                    <input type="text" class="popup__input" placeholder="Логин" required>
-                    <input type ="password" class="popup__input" placeholder="Пароль" required>
-                    <button class="popup__button button">Авторизоваться</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <script src="{% static 'Hujjatlar/js/jcript.js' %}"></script>
-</body>
-</html>
+</section>
+{% endblock %}
