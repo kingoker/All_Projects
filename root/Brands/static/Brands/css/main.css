@@ -109,9 +109,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-between;
 }
 .sertificat__item{
-    width: 93px;
+    height: 46px;
     object-fit: scale-down;
 }
 .footer{
