@@ -33,8 +33,9 @@
         </h2>
         <div class="folder__list">
             {% for folder in folders %}
+
             <div class="folder__item">
-                <a href="" class="folder__link"  title="Длинное Название папки">
+                <a href="?parent={{folder.pk}}&level={{folder.level}}" class="folder__link"  title="{{ folder.name }}">
                     <i class="bi bi-folder-fill"></i>
                     <p class="folder__name">{{ folder.name }}</p>
                 </a>

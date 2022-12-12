@@ -3,8 +3,14 @@ from django.views import generic
 from .models import *
 
 
+
 def main(request):
-    folders = Folder.objects.filter(publicated=True)
+    folders = Folder.objects.filter(publicated=True, level=0)
+    if request.GET.get('parent'):
+        parent = request.GET.get('parent')
+        level = int(request.GET.get('level'))+1
+        folders = Folder.objects.filter(parent_id=parent, level=level)
+
     context = {
         'folders': folders,
     }
