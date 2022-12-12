@@ -32,24 +32,17 @@
             папки
         </h2>
         <div class="folder__list">
+            {% for folder in folders %}
             <div class="folder__item">
                 <a href="" class="folder__link"  title="Длинное Название папки">
                     <i class="bi bi-folder-fill"></i>
-                    <p class="folder__name">Длинное Название папки</p>
+                    <p class="folder__name">{{ folder.name }}</p>
                 </a>
                 <a href="#" class="folder__delete">
                     <i class="bi bi-trash3-fill"></i>
                 </a>
             </div>
-            <div class="folder__item">
-                <a href="/" class="folder__link"  title="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!">
-                    <i class="bi bi-folder-fill"></i>
-                    <p class="folder__name">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!</p>
-                </a>
-                <a href="#" class="folder__delete">
-                    <i class="bi bi-trash3-fill"></i>
-                </a>
-            </div>
+            {% endfor %}
         </div>
 
         <h2 class="main__subtitle">

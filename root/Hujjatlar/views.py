@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.views import generic
+from .models import *
 
 
 def main(request):
-    pass
+    folders = Folder.objects.filter(publicated=True)
+    context = {
+        'folders': folders,
+    }
 
-    return render(request, 'Hujjatlar/index.html')
+    return render(request, 'Hujjatlar/index.html', context)
 
 
 def creating(request):
