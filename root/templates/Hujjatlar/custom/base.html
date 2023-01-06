@@ -38,10 +38,6 @@
         <section class="sidebar">
             <div class="sidebar__container container">
                 <div class="sidebar__list"  id="menu-act">
-                    <a href="{% url 'main' %}" class="sidebar__item sidebar__item-active">
-                        <i class="bi bi-folder-fill"></i>
-                        Hujjatlar
-                    </a>
                     <details class="sidebar__details">
                         <summary class="sidebar__item">
                             <i class="bi bi-bar-chart-line-fill"></i>
@@ -51,6 +47,10 @@
                         <a href="{% url 'report' %}" class="sidebar__item_element">Финансы</a>
                         <a href="{% url 'report' %}" class="sidebar__item_element">Экспорт</a>
                     </details>
+                    <a href="{% url 'main' %}" class="sidebar__item ">
+                        <i class="bi bi-folder-fill"></i>
+                        Hujjatlar
+                    </a>
                     <a href="{% url 'videoCourses' %}" class="sidebar__item">
                         <i class="bi bi-mortarboard-fill"></i>
                         Видео уроки

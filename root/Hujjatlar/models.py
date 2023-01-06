@@ -3,6 +3,7 @@ from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 
 
+# Папки
 class Folder(MPTTModel):
     author = models.ForeignKey(User, related_name="Создатель", null=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=100, verbose_name="Название")
@@ -26,3 +27,19 @@ class Folder(MPTTModel):
 
     def __str__(self):
         return self.name
+
+
+# Отчёт отделов
+class Report(models.Model):
+    title = models.CharField(max_length=100, verbose_name="Название")
+    url = models.CharField(max_length=100, verbose_name="Ссылка на файл")
+    slug = models.SlugField(max_length=100, verbose_name="Slug")
+
+    class Meta:
+        verbose_name = 'Отчёт'
+        verbose_name_plural = 'Отчёты'
+
+    def __str__(self):
+        return self.title
+
+# Миграции не делал перед пушом
