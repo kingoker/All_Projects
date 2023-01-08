@@ -25,7 +25,11 @@ def creating(request):
 
 def report(request, slug):
     reports = Report.objects.filter(department__slug=slug)
-    current = reports.last().url
+    current = ""
+    print(reports.last())
+    if reports.last() is not None:
+        current = reports.last().url
+
     if request.GET.get("report_url"):
         current = Report.objects.filter(slug=request.GET.get("report_url"))
         current = current.first().url
