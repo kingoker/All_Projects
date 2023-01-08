@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
+from django.urls import reverse
 
 
 # Папки
@@ -41,12 +42,15 @@ class Department(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('report', kwargs={'slug': self.slug})
+
 
 # Отчёт отделов
 class Report(models.Model):
     department = models.ManyToManyField(Department, verbose_name="Отдел")
     title = models.CharField(max_length=100, verbose_name="Название")
-    url = models.CharField(max_length=100, verbose_name="Ссылка на файл")
+    url = models.CharField(max_length=300, verbose_name="Ссылка на файл")
     slug = models.SlugField(max_length=100, verbose_name="Slug")
 
     class Meta:
