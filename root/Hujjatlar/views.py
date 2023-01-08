@@ -3,7 +3,6 @@ from django.views import generic
 from .models import *
 
 
-
 def main(request):
     folders = Folder.objects.filter(publicated=True, level=0)
     if request.GET.get('parent'):
@@ -25,9 +24,13 @@ def creating(request):
 
 
 def report(request):
-    pass
+    reports = Report.objects.all
 
-    return render(request, 'Hujjatlar/report.html')
+    context = {
+        'reports': reports,
+    }
+
+    return render(request, 'Hujjatlar/report.html', context)
 
 
 def video_courses(request):

@@ -4,7 +4,12 @@
 
 {% block content %}
 
+
 <section class="main main__creating">
+    {% for report in reports %}
+        <button>{{ report.title }}</button>
+    {% endfor %}
+
     <div class="excel__container container">
         <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTyh3W1R-OYp9XCPnQTzhuSrgdZrKrPSoW07QDHU9IstIieITZaAVRjF8fBxrpKw/pubhtml?widget=true&amp;" style="width: 100%; height: 95%;" ></iframe>
     </div>

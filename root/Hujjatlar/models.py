@@ -29,8 +29,22 @@ class Folder(MPTTModel):
         return self.name
 
 
+# Отделы
+class Department(models.Model):
+    title = models.CharField(max_length=100, verbose_name="Название")
+    slug = models.SlugField(max_length=100, verbose_name="Slug")
+
+    class Meta:
+        verbose_name = 'Отдел'
+        verbose_name_plural = 'Отделы'
+
+    def __str__(self):
+        return self.title
+
+
 # Отчёт отделов
 class Report(models.Model):
+    department = models.ManyToManyField(Department, verbose_name="Отдел")
     title = models.CharField(max_length=100, verbose_name="Название")
     url = models.CharField(max_length=100, verbose_name="Ссылка на файл")
     slug = models.SlugField(max_length=100, verbose_name="Slug")
@@ -41,5 +55,3 @@ class Report(models.Model):
 
     def __str__(self):
         return self.title
-
-# Миграции не делал перед пушом

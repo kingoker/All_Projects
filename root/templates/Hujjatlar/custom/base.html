@@ -44,8 +44,9 @@
                             Показатели отделов
                             <i class="bi bi-caret-down-fill"></i>
                         </summary>
-                        <a href="{% url 'report' %}" class="sidebar__item_element">Финансы</a>
-                        <a href="{% url 'report' %}" class="sidebar__item_element">Экспорт</a>
+                        {% for departments in departments %}
+                            <a href="{% url 'report' %}" class="sidebar__item_element">{{ departments.title }}</a>
+                        {% endfor %}
                     </details>
                     <a href="{% url 'main' %}" class="sidebar__item ">
                         <i class="bi bi-folder-fill"></i>
